@@ -102,7 +102,7 @@ void readRegisters(uint8_t reg, uint8_t *buffer, uint8_t length) {
   Wire.write(reg); //  Register address
   uint8_t error = Wire.endTransmission(false); // Stop condition + ACK from slave
 
-  // Check if slace did not acknowledge
+  // Check if slave did not acknowledge
   if (error != 0) {
     Serial.print("Error reading from register: ");
     Serial.println(reg);
